@@ -104,53 +104,82 @@ struct dominoC {
   int l;
   int r;
 };
-int findDomin(int n, bool left, vector<dominoC> dominos, int end){
+int findDomin(int n, bool left, vector<dominoC> dominos, int start){
   int found = -1;
   if (left) {
-    for (int i = end; i < dominos.size(); i++) {
+    for (int i = start; i < dominos.size(); i++) {
       if(dominos[i].l == n) return i;
     }
   }else {
-    for (int i = end; i < dominos.size(); i++) {
+    for (int i = start; i < dominos.size(); i++) {
       if(dominos[i].r == n) return i;
     }
   }
   return found;
 }
-bool FormsDominoChain(vector<dominoC> & dominos, int end, int back = 0){
-  int start = 0;
-  // base case
-  if(end == dominos.size()){
+// bool FormsDominoChain(vector<dominoC> & dominos, int end){
+//   int start = 0;
+//   static int back = 0;
+//   // base case
+//   if(end == dominos.size()){
+//     return true;
+//   }
+//   // 
+//   int foundr = findDomin(dominos[end].r, true, dominos, end+1);
+//   if(foundr != -1){
+//     // add the domino to the right of the ranged dominos
+//     dominoC val = dominos[foundr];
+//     dominos.erase(dominos.begin() + foundr);
+//     dominos.insert(dominos.begin()+ end + 1, val);
+//     return FormsDominoChain(dominos,end+1);
+//   }else{
+//     int foundl = findDomin(dominos[start].l, false, dominos, end+1);
+//     if(foundl == -1){
+//       if(dominos.size() - back -1 > end){
+//         dominoC val = dominos[end];
+//         dominos.erase(dominos.begin() + end);
+//         dominos.emplace_back(val);
+//         back++;
+//         return FormsDominoChain(dominos,end+1);
+//       }else {
+//         return false;
+//       }
+//     }
+//     else {
+//       // add the domino to the left of the ranged dominos
+//       dominoC val = dominos[foundl];
+//       dominos.erase(dominos.begin() + foundl);
+//       dominos.insert(dominos.begin()+ start, val);
+//     return FormsDominoChain(dominos, end+1);
+//     }
+//   }
+// }
+
+bool FormsDominoChain(vector<dominoC> & dominos, int sortedi){
+  if(sortedi == dominos.size()){
     return true;
   }
-  // 
-  int foundr = findDomin(dominos[end].r, true, dominos, end+1);
+  // Trying to add to the right
+  int foundr = findDomin(dominos[sortedi].r, false, dominos, sortedi+1);
+  // if failed to find a domino to the right will break
+  bool solve = false;
   if(foundr != -1){
-    // add the domino to the right of the ranged dominos
     dominoC val = dominos[foundr];
-    dominos.erase(dominos.begin() + foundr);
-    dominos.insert(dominos.begin()+ end + 1, val);
-    return FormsDominoChain(dominos,end+1);
-  }else{
-    int foundl = findDomin(dominos[start].l, false, dominos, end+1);
-    if(foundl == -1){
-      if(dominos.size() - back -1 > end){
-        dominoC val = dominos[end];
-        dominos.erase(dominos.begin() + end);
-        dominos.emplace_back(val);
-        return FormsDominoChain(dominos,end+1, back++);
-      }else {
-        return false;
-      }
-    }
-    else {
-      // add the domino to the left of the ranged dominos
-      dominoC val = dominos[foundl];
-      dominos.erase(dominos.begin() + foundl);
-      dominos.insert(dominos.begin()+ start, val);
-    return FormsDominoChain(dominos, end+1);
-    }
+    dominos.erase(dominos.begin()+ foundr);
+    dominos.insert(dominos.begin() + ++sortedi,val);
+    solve = FormsDominoChain(dominos,sortedi);
   }
+
+  if(solve) return false;
+  // 10 1 6 2 3 5 1 0 6 2 4 3 5 4 0 6 2 3 3 6 6
+  int foundl = findDomin(dominos[0].l, true, dominos, sortedi+1);
+  if(foundl == -1 && foundr == -1) return false;
+  dominoC val = dominos[foundl];
+  dominos.erase(dominos.begin()+ foundl);
+  dominos.insert(dominos.begin() + ++sortedi,val);
+  solve = FormsDominoChain(dominos,sortedi);
+
+  if(solve) return true; else return false;
 }
   
 int problem7(){

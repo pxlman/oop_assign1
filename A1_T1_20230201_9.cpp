@@ -45,5 +45,6 @@ bool bears(int k){
 int main() {
     int k;
     cin >> k;
+    //Prints true if the condition is true and false if false
     cout << (bears(k) ? "true" : "false");
 }

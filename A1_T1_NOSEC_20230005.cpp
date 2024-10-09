@@ -1,5 +1,10 @@
 // Online C++ compiler to run C++ program online
 #include <iostream>
+#include<map>
+#include<codecvt>
+#include<fstream>
+#include<sstream>
+#include<string>
 #include<set>
 #include<vector>
 using namespace std;
@@ -195,8 +200,63 @@ int problem7(){
   }
   return 0;
 }
+void writeWstringVec(vector<wstring> words,string filePath){
+  wofstream oFile(filePath);
+  oFile.imbue(locale(oFile.getloc(),new codecvt_utf8<wchar_t>));
+  while(!oFile) cout << "Error \n";
+  for (auto &&i : words)
+  {
+    oFile << i << ' ';
+  }
+  
+}
+void censor(vector<wstring> &words){
+  map<wstring, wstring> mp = {
+      {L"حرب", L"خلاف"},
+      {L"يحارب", L"يخالف"},
+      {L"قتل", L"هزم"},
+      {L"يقتل", L"يهزم"},
+      {L"ابادة", L"هزيمة"},
+      {L"يبيد", L"يهزم"},
+      {L"تعذيب", L"تهذيب"},
+      {L"يعذب", L"يهذب"},
+  };
+  for (auto i = words.begin(); i != words.end(); i++)
+  {
+    if(mp.count(*i)){
+      *i = mp[*i];
+    }
+  }
+  
+}
+int problem10(){
+  // utf-8
+  locale::global(locale(""));
+  cout << "Enter the file path: "; string iPath; getline(cin,iPath);
+  wifstream iFile(iPath);
+  iFile.imbue(locale(iFile.getloc(),new codecvt_utf8<wchar_t>));
+
+  if(!iFile) return 1;
+  
+  wstring lines;
+  wstring line;
+  while(getline(iFile,line)){
+    lines += line;
+  }
+  
+  vector<wstring> words;
+  wstringstream wordStream(lines);
+  wstring word;
+  
+  while(wordStream >> word){
+    words.push_back(word);
+  }
+  censor(words);
+  writeWstringVec(words,iPath);
+  return 0;
+}
 int main()
 {
-  problem7();
+  problem10();
   return 0;
 }

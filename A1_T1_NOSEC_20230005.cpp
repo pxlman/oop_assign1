@@ -169,13 +169,12 @@ bool FormsDominoChain(vector<dominoC> & dominos, int sortedi){
   // if failed to find a domino to the right will break
   bool solve = false;
   if(foundr != -1){
+    // Move the found from the right to the end of the sorted dominos
     dominoC val = dominos[foundr];
     dominos.erase(dominos.begin()+ foundr);
     dominos.insert(dominos.begin() + ++sortedi,val);
     solve = FormsDominoChain(dominos,sortedi);
   }
-
-  if(solve) return false;
   // 10 1 6 2 3 5 1 0 6 2 4 3 5 4 0 6 2 3 3 6 6
   int foundl = findDomin(dominos[0].l, true, dominos, sortedi+1);
   if(foundl == -1 && foundr == -1) return false;
@@ -257,6 +256,6 @@ int problem10(){
 }
 int main()
 {
-  problem10();
+  problem7();
   return 0;
 }

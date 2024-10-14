@@ -88,20 +88,47 @@ double Polynomial::evaluate(double x) const {
 }
 
 Polynomial Polynomial::compose(const Polynomial& q) const {
-    // Implement composition using Horner's method or other efficient algorithms
-}
+int n = degree(), m = q.degree();
+    vector<double> result(n * m + 1, 0.0);
+
+    for (int i = 0; i <= n; ++i) {
+        double temp = coff[i];
+        for (int j = m - 1; j >= 0; --j) {
+            result[i * m + j] += temp * q.coff[j];
+            temp = result[i * m + j];
+        }
+    }
+
+    return Polynomial(result);}
 
 Polynomial Polynomial::derivative() const {
-    // Implement derivative calculation
-}
+if (degree() == 0) {
+        return Polynomial(); // Derivative of a constant is zero
+    }
+
+    int newDegree = degree() - 1;
+    vector<double> result(newDegree + 1, 0.0);
+
+    for (int i = 1; i <= degree(); ++i) {
+        result[i - 1] = coff[i] * i;
+    }
+
+    return Polynomial(result);}
 
 Polynomial Polynomial::integral() const {
-    // Implement integration
-}
+ int newDegree = degree() + 1;
+    vector<double> result(newDegree + 1, 0.0);
+
+    result[0] = 0.0; // Constant term of integration
+    for (int i = 1; i <= newDegree; ++i) {
+        result[i] = coff[i - 1] / i;
+    }
+
+    return Polynomial(result);}
 
 double Polynomial::integral(double x1, double x2) const {
-    // Implement definite integration using the integral function
-}
+ Polynomial integrated = integral();
+    return integrated.evaluate(x2) - integrated.evaluate(x1);}
 
 void Polynomial::setCoefficients(const vector<double>& coefficients) {
     coff = coefficients;

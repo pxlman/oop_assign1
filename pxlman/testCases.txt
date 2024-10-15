@@ -1,0 +1,480 @@
+Test Case (1):
+10
+- 1 4   5   1   1 2   - 1 2   1 2   6   - 8   1   - 5   - 3
+- 1 1   1 3   - 1   - 4   9   - 1   1   - 4   1 1   - 1 2   9
+
+Expected output:
+Polynomial 1: -3*x^10 - 5*x^9 + x^8 - 8*x^7 + 6*x^6 + 12*x^5 - 12*x^4 + 12*x^3 + x^2 + 5*x - 14
+Polynomial 2: 9*x^10 - 12*x^9 + 11*x^8 - 4*x^7 + x^6 - x^5 + 9*x^4 - 4*x^3 - x^2 + 13*x - 11
+Sum: 6*x^10 - 17*x^9 + 12*x^8 - 12*x^7 + 7*x^6 + 11*x^5 - 3*x^4 + 8*x^3 + 18*x - 25
+Subtraction: -12*x^10 + 7*x^9 - 10*x^8 - 4*x^7 + 5*x^6 + 13*x^5 - 21*x^4 + 16*x^3 + 2*x^2 - 8*x - 3
+Product: -27*x^20 - 9*x^19 + 36*x^18 - 127*x^17 + 178*x^16 - 58*x^15 - 175*x^14 + 318*x^13 - 269*x^12 + 109*x^11 - 194*x^10 + 403*x^9 - 462*x^8 + 370*x^7 + 44*x^6 - 245*x^5 + 141*x^4 - 68*x^3 + 68*x^2 - 237*x + 154
+Degree of Polynomial: 10
+Evaluation of polynomial at x=2: -5728
+Derivative: -30*x^9 - 45*x^8 + 8*x^7 - 56*x^6 + 36*x^5 + 60*x^4 - 48*x^3 + 36*x^2 + 2*x + 5
+Integral: -3*x^11/11 - x^10/2 + x^9/9 - x^8 + 6*x^7/7 + 2*x^6 - 12*x^5/5 + 3*x^4 + x^3/3 + 5*x^2/2 - 14*x
+Definite integration from x=0 to x=1: -32471/3465
+Test Case (2):
+0
+1 4
+9
+
+Expected output:
+Polynomial 1: 14
+Polynomial 2: 9
+Sum: 23
+Subtraction: 5
+Product: 126
+Degree of Polynomial: 0
+Evaluation of polynomial at x=2: 14
+Derivative: 0
+Integral: 14*x
+Definite integration from x=0 to x=1: 14
+Test Case (3):
+5
+- 7   - 1 0   2   2   1 0   - 1 0
+9   - 1 3   7   1   6   1 0
+
+Expected output:
+Polynomial 1: -10*x^5 + 10*x^4 + 2*x^3 + 2*x^2 - 10*x - 7
+Polynomial 2: 10*x^5 + 6*x^4 + x^3 + 7*x^2 - 13*x + 9
+Sum: 16*x^4 + 3*x^3 + 9*x^2 - 23*x + 2
+Subtraction: -20*x^5 + 4*x^4 + x^3 - 5*x^2 + 3*x - 16
+Product: -100*x^10 + 40*x^9 + 70*x^8 - 28*x^7 + 114*x^6 - 334*x^5 + 26*x^4 - 85*x^3 + 99*x^2 + x - 63
+Degree of Polynomial: 5
+Evaluation of polynomial at x=2: -163
+Derivative: -50*x^4 + 40*x^3 + 6*x^2 + 4*x - 10
+Integral: -5*x^6/3 + 2*x^5 + x^4/2 + 2*x^3/3 - 5*x^2 - 7*x
+Definite integration from x=0 to x=1: -21/2
+Test Case (4):
+8
+- 4   8   - 2   0   7   2   5   - 6   2
+- 8   1 2   1 3   - 1 0   - 1 2   - 1   - 4   - 2   7
+
+Expected output:
+Polynomial 1: 2*x^8 - 6*x^7 + 5*x^6 + 2*x^5 + 7*x^4 - 2*x^2 + 8*x - 4
+Polynomial 2: 7*x^8 - 2*x^7 - 4*x^6 - x^5 - 12*x^4 - 10*x^3 + 13*x^2 + 12*x - 8
+Sum: 9*x^8 - 8*x^7 + x^6 + x^5 - 5*x^4 - 10*x^3 + 11*x^2 + 20*x - 12
+Subtraction: -5*x^8 - 4*x^7 + 9*x^6 + 3*x^5 + 19*x^4 + 10*x^3 - 15*x^2 - 4*x + 4
+Product: 14*x^16 - 46*x^15 + 39*x^14 + 26*x^13 + 7*x^12 + 25*x^11 - 18*x^10 - 75*x^9 - 163*x^8 + 42*x^7 + 107*x^6 - 4*x^5 - 114*x^4 + 120*x^3 + 60*x^2 - 112*x + 32
+Degree of Polynomial: 8
+Evaluation of polynomial at x=2: 244
+Derivative: 16*x^7 - 42*x^6 + 30*x^5 + 10*x^4 + 28*x^3 - 4*x + 8
+Integral: 2*x^9/9 - 3*x^8/4 + 5*x^7/7 + x^6/3 + 7*x^5/5 - 2*x^3/3 + 4*x^2 - 4*x
+Definite integration from x=0 to x=1: 1579/1260
+Test Case (5):
+11
+- 1 4   - 3   9   - 6   5   - 1 1   - 1 2   - 9   1 0   1 3   - 1 1   9
+3   3   1 5   7   6   3   1 0   - 1   5   - 2   8   2
+
+Expected output:
+Polynomial 1: 9*x^11 - 11*x^10 + 13*x^9 + 10*x^8 - 9*x^7 - 12*x^6 - 11*x^5 + 5*x^4 - 6*x^3 + 9*x^2 - 3*x - 14
+Polynomial 2: 2*x^11 + 8*x^10 - 2*x^9 + 5*x^8 - x^7 + 10*x^6 + 3*x^5 + 6*x^4 + 7*x^3 + 15*x^2 + 3*x + 3
+Sum: 11*x^11 - 3*x^10 + 11*x^9 + 15*x^8 - 10*x^7 - 2*x^6 - 8*x^5 + 11*x^4 + x^3 + 24*x^2 - 11
+Subtraction: 7*x^11 - 19*x^10 + 15*x^9 + 5*x^8 - 8*x^7 - 22*x^6 - 14*x^5 - x^4 - 13*x^3 - 6*x^2 - 6*x - 17
+Product: 18*x^22 + 50*x^21 - 80*x^20 + 191*x^19 - 28*x^18 + 50*x^17 - 146*x^16 + 42*x^15 + 135*x^14 - 7*x^13 - 20*x^12 - 46*x^11 - 17*x^10 - 257*x^9 - 219*x^8 - 218*x^7 - 131*x^6 - 105*x^5 + 27*x^4 - 134*x^3 - 192*x^2 - 51*x - 42
+Degree of Polynomial: 11
+Evaluation of polynomial at x=2: 14160
+Derivative: 99*x^10 - 110*x^9 + 117*x^8 + 80*x^7 - 63*x^6 - 72*x^5 - 55*x^4 + 20*x^3 - 18*x^2 + 18*x - 3
+Integral: 3*x^12/4 - x^11 + 13*x^10/10 + 10*x^9/9 - 9*x^8/8 - 12*x^7/7 - 11*x^6/6 + x^5 - 3*x^4/2 + 3*x^3 - 3*x^2/2 - 14*x
+Definite integration from x=0 to x=1: -39089/2520
+Test Case (6):
+1
+0   1 0
+4   4
+
+Expected output:
+Polynomial 1: 10*x
+Polynomial 2: 4*x + 4
+Sum: 14*x + 4
+Subtraction: 6*x - 4
+Product: 40*x^2 + 40*x
+Degree of Polynomial: 1
+Evaluation of polynomial at x=2: 20
+Derivative: 10
+Integral: 5*x^2
+Definite integration from x=0 to x=1: 5
+Test Case (7):
+4
+- 5   1 4   - 1 1   - 1   3
+1 2   - 1 2   1 2   6   - 3
+
+Expected output:
+Polynomial 1: 3*x^4 - x^3 - 11*x^2 + 14*x - 5
+Polynomial 2: -3*x^4 + 6*x^3 + 12*x^2 - 12*x + 12
+Sum: 5*x^3 + x^2 + 2*x + 7
+Subtraction: 6*x^4 - 7*x^3 - 23*x^2 + 26*x - 17
+Product: -9*x^8 + 21*x^7 + 63*x^6 - 156*x^5 + 15*x^4 + 258*x^3 - 360*x^2 + 228*x - 60
+Degree of Polynomial: 4
+Evaluation of polynomial at x=2: 19
+Derivative: 12*x^3 - 3*x^2 - 22*x + 14
+Integral: 3*x^5/5 - x^4/4 - 11*x^3/3 + 7*x^2 - 5*x
+Definite integration from x=0 to x=1: -79/60
+Test Case (8):
+9
+5   1   8   - 8   - 1 3   0   - 6   - 6   - 1 1   8
+7   1 2   - 1 1   1 0   1 0   5   - 5   - 4   - 8   1 2
+
+Expected output:
+Polynomial 1: 8*x^9 - 11*x^8 - 6*x^7 - 6*x^6 - 13*x^4 - 8*x^3 + 8*x^2 + x + 5
+Polynomial 2: 12*x^9 - 8*x^8 - 4*x^7 - 5*x^6 + 5*x^5 + 10*x^4 + 10*x^3 - 11*x^2 + 12*x + 7
+Sum: 20*x^9 - 19*x^8 - 10*x^7 - 11*x^6 + 5*x^5 - 3*x^4 + 2*x^3 - 3*x^2 + 13*x + 12
+Subtraction: -4*x^9 - 3*x^8 - 2*x^7 - x^6 - 5*x^5 - 23*x^4 - 18*x^3 + 19*x^2 - 11*x - 2
+Product: 96*x^18 - 196*x^17 - 16*x^16 - 20*x^15 + 167*x^14 - 77*x^13 - 22*x^12 - 76*x^11 + 142*x^10 - 75*x^9 - 337*x^8 - 309*x^7 + 81*x^6 + 47*x^5 - 215*x^4 + 79*x^3 + 13*x^2 + 67*x + 35
+Degree of Polynomial: 9
+Evaluation of polynomial at x=2: -105
+Derivative: 72*x^8 - 88*x^7 - 42*x^6 - 36*x^5 - 52*x^3 - 24*x^2 + 16*x + 1
+Integral: 4*x^10/5 - 11*x^9/9 - 3*x^8/4 - 6*x^7/7 - 13*x^5/5 - 2*x^4 + 8*x^3/3 + x^2/2 + 5*x
+Definite integration from x=0 to x=1: 1937/1260
+Test Case (9):
+4
+- 1   - 1 1   - 6   - 3   6
+1 5   3   1 3   - 4   1 4
+
+Expected output:
+Polynomial 1: 6*x^4 - 3*x^3 - 6*x^2 - 11*x - 1
+Polynomial 2: 14*x^4 - 4*x^3 + 13*x^2 + 3*x + 15
+Sum: 20*x^4 - 7*x^3 + 7*x^2 - 8*x + 14
+Subtraction: -8*x^4 + x^3 - 19*x^2 - 14*x - 16
+Product: 84*x^8 - 66*x^7 + 6*x^6 - 151*x^5 + 33*x^4 - 202*x^3 - 136*x^2 - 168*x - 15
+Degree of Polynomial: 4
+Evaluation of polynomial at x=2: 25
+Derivative: 24*x^3 - 9*x^2 - 12*x - 11
+Integral: 6*x^5/5 - 3*x^4/4 - 2*x^3 - 11*x^2/2 - x
+Definite integration from x=0 to x=1: -161/20
+Test Case (10):
+1
+1 5   7
+- 1 1   - 1 3
+
+Expected output:
+Polynomial 1: 7*x + 15
+Polynomial 2: -13*x - 11
+Sum: 4 - 6*x
+Subtraction: 20*x + 26
+Product: -91*x^2 - 272*x - 165
+Degree of Polynomial: 1
+Evaluation of polynomial at x=2: 29
+Derivative: 7
+Integral: 7*x^2/2 + 15*x
+Definite integration from x=0 to x=1: 37/2
+Test Case (11):
+4
+4   8   - 4   0   - 1
+4   - 5   - 3   - 1   6
+
+Expected output:
+Polynomial 1: -x^4 - 4*x^2 + 8*x + 4
+Polynomial 2: 6*x^4 - x^3 - 3*x^2 - 5*x + 4
+Sum: 5*x^4 - x^3 - 7*x^2 + 3*x + 8
+Subtraction: -7*x^4 + x^3 - x^2 + 13*x
+Product: -6*x^8 + x^7 - 21*x^6 + 57*x^5 + 24*x^4 - 8*x^3 - 68*x^2 + 12*x + 16
+Degree of Polynomial: 4
+Evaluation of polynomial at x=2: -12
+Derivative: -4*x^3 - 8*x + 8
+Integral: -x^5/5 - 4*x^3/3 + 4*x^2 + 4*x
+Definite integration from x=0 to x=1: 97/15
+Test Case (12):
+5
+- 5   - 1 3   2   9   5   1 1
+- 1   - 2   - 1 4   - 4   - 1 4   - 9
+
+Expected output:
+Polynomial 1: 11*x^5 + 5*x^4 + 9*x^3 + 2*x^2 - 13*x - 5
+Polynomial 2: -9*x^5 - 14*x^4 - 4*x^3 - 14*x^2 - 2*x - 1
+Sum: 2*x^5 - 9*x^4 + 5*x^3 - 12*x^2 - 15*x - 6
+Subtraction: 20*x^5 + 19*x^4 + 13*x^3 + 16*x^2 - 11*x - 4
+Product: -99*x^10 - 199*x^9 - 195*x^8 - 318*x^7 - 39*x^6 + 72*x^5 + 71*x^4 + 189*x^3 + 94*x^2 + 23*x + 5
+Degree of Polynomial: 5
+Evaluation of polynomial at x=2: 481
+Derivative: 55*x^4 + 20*x^3 + 27*x^2 + 4*x - 13
+Integral: 11*x^6/6 + x^5 + 9*x^4/4 + 2*x^3/3 - 13*x^2/2 - 5*x
+Definite integration from x=0 to x=1: -23/4
+Test Case (13):
+1
+1   8
+0   2
+
+Expected output:
+Polynomial 1: 8*x + 1
+Polynomial 2: 2*x
+Sum: 10*x + 1
+Subtraction: 6*x + 1
+Product: 16*x^2 + 2*x
+Degree of Polynomial: 1
+Evaluation of polynomial at x=2: 17
+Derivative: 8
+Integral: 4*x^2 + x
+Definite integration from x=0 to x=1: 5
+Test Case (14):
+6
+- 1   - 1 2   1 5   1   7   1 5   - 1 3
+- 5   - 6   - 5   - 1   - 4   1 0   - 1
+
+Expected output:
+Polynomial 1: -13*x^6 + 15*x^5 + 7*x^4 + x^3 + 15*x^2 - 12*x - 1
+Polynomial 2: -x^6 + 10*x^5 - 4*x^4 - x^3 - 5*x^2 - 6*x - 5
+Sum: -14*x^6 + 25*x^5 + 3*x^4 + 10*x^2 - 18*x - 6
+Subtraction: -12*x^6 + 5*x^5 + 11*x^4 + 2*x^3 + 20*x^2 - 6*x + 4
+Product: 13*x^12 - 145*x^11 + 195*x^10 + 22*x^9 + 17*x^8 + 154*x^7 - 240*x^6 - 99*x^5 - 100*x^4 - 34*x^3 + 2*x^2 + 66*x + 5
+Degree of Polynomial: 6
+Evaluation of polynomial at x=2: -197
+Derivative: -78*x^5 + 75*x^4 + 28*x^3 + 3*x^2 + 30*x - 12
+Integral: -13*x^7/7 + 5*x^6/2 + 7*x^5/5 + x^4/4 + 5*x^3 - 6*x^2 - x
+Definite integration from x=0 to x=1: 41/140
+Test Case (15):
+10
+1 3   4   4   - 7   - 1 0   - 2   - 7   - 3   1   - 1 2   3
+- 8   - 6   4   - 4   - 1 2   1 3   - 1 4   - 1   1 1   7   - 5
+
+Expected output:
+Polynomial 1: 3*x^10 - 12*x^9 + x^8 - 3*x^7 - 7*x^6 - 2*x^5 - 10*x^4 - 7*x^3 + 4*x^2 + 4*x + 13
+Polynomial 2: -5*x^10 + 7*x^9 + 11*x^8 - x^7 - 14*x^6 + 13*x^5 - 12*x^4 - 4*x^3 + 4*x^2 - 6*x - 8
+Sum: -2*x^10 - 5*x^9 + 12*x^8 - 4*x^7 - 21*x^6 + 11*x^5 - 22*x^4 - 11*x^3 + 8*x^2 - 2*x + 5
+Subtraction: 8*x^10 - 19*x^9 - 10*x^8 - 2*x^7 + 7*x^6 - 15*x^5 + 2*x^4 - 3*x^3 + 10*x + 21
+Product: -15*x^20 + 81*x^19 - 56*x^18 - 113*x^17 - 5*x^16 + 134*x^15 - 244*x^14 + 137*x^13 - 70*x^12 - 156*x^11 + 276*x^10 + 229*x^9 + 102*x^8 + 165*x^7 - 122*x^6 + 153*x^5 - 34*x^4 - 4*x^3 - 4*x^2 - 110*x - 104
+Degree of Polynomial: 10
+Evaluation of polynomial at x=2: -3891
+Derivative: 30*x^9 - 108*x^8 + 8*x^7 - 21*x^6 - 42*x^5 - 10*x^4 - 40*x^3 - 21*x^2 + 8*x + 4
+Integral: 3*x^11/11 - 6*x^10/5 + x^9/9 - 3*x^8/8 - x^7 - x^6/3 - 2*x^5 - 7*x^4/4 + 4*x^3/3 + 2*x^2 + 13*x
+Definite integration from x=0 to x=1: 39833/3960
+Test Case (16):
+2
+1 2   6   2
+- 4   - 4   5
+
+Expected output:
+Polynomial 1: 2*x^2 + 6*x + 12
+Polynomial 2: 5*x^2 - 4*x - 4
+Sum: 7*x^2 + 2*x + 8
+Subtraction: -3*x^2 + 10*x + 16
+Product: 10*x^4 + 22*x^3 + 28*x^2 - 72*x - 48
+Degree of Polynomial: 2
+Evaluation of polynomial at x=2: 32
+Derivative: 4*x + 6
+Integral: 2*x^3/3 + 3*x^2 + 12*x
+Definite integration from x=0 to x=1: 47/3
+Test Case (17):
+3
+6   1 3   - 1 3   1 1
+1 2   - 9   0   - 1 0
+
+Expected output:
+Polynomial 1: 11*x^3 - 13*x^2 + 13*x + 6
+Polynomial 2: -10*x^3 - 9*x + 12
+Sum: x^3 - 13*x^2 + 4*x + 18
+Subtraction: 21*x^3 - 13*x^2 + 22*x - 6
+Product: -110*x^6 + 130*x^5 - 229*x^4 + 189*x^3 - 273*x^2 + 102*x + 72
+Degree of Polynomial: 3
+Evaluation of polynomial at x=2: 68
+Derivative: 33*x^2 - 26*x + 13
+Integral: 11*x^4/4 - 13*x^3/3 + 13*x^2/2 + 6*x
+Definite integration from x=0 to x=1: 131/12
+Test Case (18):
+9
+- 8   - 1 4   - 1 2   1 2   - 5   - 1 4   0   1 3   5   - 9
+- 7   2   - 6   - 8   - 1 3   - 1 4   2   1 3   - 1 4   - 9
+
+Expected output:
+Polynomial 1: -9*x^9 + 5*x^8 + 13*x^7 - 14*x^5 - 5*x^4 + 12*x^3 - 12*x^2 - 14*x - 8
+Polynomial 2: -9*x^9 - 14*x^8 + 13*x^7 + 2*x^6 - 14*x^5 - 13*x^4 - 8*x^3 - 6*x^2 + 2*x - 7
+Sum: -18*x^9 - 9*x^8 + 26*x^7 + 2*x^6 - 28*x^5 - 18*x^4 + 4*x^3 - 18*x^2 - 12*x - 15
+Subtraction: 19*x^8 - 2*x^6 + 8*x^4 + 20*x^3 - 6*x^2 - 16*x - 1
+Product: 81*x^18 + 81*x^17 - 304*x^16 - 135*x^15 + 431*x^14 + 314*x^13 - 395*x^12 - 308*x^11 + 484*x^10 + 383*x^9 - 94*x^8 - 87*x^7 + 242*x^6 + 406*x^5 + 347*x^4 + 40*x^3 + 104*x^2 + 82*x + 56
+Degree of Polynomial: 9
+Evaluation of polynomial at x=2: -2180
+Derivative: -81*x^8 + 40*x^7 + 91*x^6 - 70*x^4 - 20*x^3 + 36*x^2 - 24*x - 14
+Integral: -9*x^10/10 + 5*x^9/9 + 13*x^8/8 - 7*x^6/3 - x^5 + 3*x^4 - 4*x^3 - 7*x^2 - 8*x
+Definite integration from x=0 to x=1: -6499/360
+Test Case (19):
+8
+- 1 1   - 1   - 3   - 9   - 9   - 8   - 1   1 0   - 8
+- 5   - 1 1   - 9   - 1 1   1 4   3   7   - 1 4   - 1 4
+
+Expected output:
+Polynomial 1: -8*x^8 + 10*x^7 - x^6 - 8*x^5 - 9*x^4 - 9*x^3 - 3*x^2 - x - 11
+Polynomial 2: -14*x^8 - 14*x^7 + 7*x^6 + 3*x^5 + 14*x^4 - 11*x^3 - 9*x^2 - 11*x - 5
+Sum: -22*x^8 - 4*x^7 + 6*x^6 - 5*x^5 + 5*x^4 - 20*x^3 - 12*x^2 - 12*x - 16
+Subtraction: 6*x^8 + 24*x^7 - 8*x^6 - 11*x^5 - 23*x^4 + 2*x^3 + 6*x^2 + 10*x - 6
+Product: 112*x^16 - 28*x^15 - 182*x^14 + 172*x^13 + 149*x^12 + 421*x^11 + 29*x^10 - 137*x^9 + 21*x^8 + 144*x^7 + 151*x^6 + 206*x^5 + 28*x^4 + 208*x^3 + 125*x^2 + 126*x + 55
+Degree of Polynomial: 8
+Evaluation of polynomial at x=2: -1329
+Derivative: -64*x^7 + 70*x^6 - 6*x^5 - 40*x^4 - 36*x^3 - 27*x^2 - 6*x - 1
+Integral: -8*x^9/9 + 5*x^8/4 - x^7/7 - 4*x^6/3 - 9*x^5/5 - 9*x^4/4 - x^3 - x^2/2 - 11*x
+Definite integration from x=0 to x=1: -11129/630
+Test Case (20):
+2
+9   1 2   - 6
+- 8   1 4   - 3
+
+Expected output:
+Polynomial 1: -6*x^2 + 12*x + 9
+Polynomial 2: -3*x^2 + 14*x - 8
+Sum: -9*x^2 + 26*x + 1
+Subtraction: -3*x^2 - 2*x + 17
+Product: 18*x^4 - 120*x^3 + 189*x^2 + 30*x - 72
+Degree of Polynomial: 2
+Evaluation of polynomial at x=2: 9
+Derivative: 12 - 12*x
+Integral: -2*x^3 + 6*x^2 + 9*x
+Definite integration from x=0 to x=1: 13
+Test Case (21):
+4
+3   1 2   - 3   - 1   9
+1   - 3   1 4   4   1 5
+
+Expected output:
+Polynomial 1: 9*x^4 - x^3 - 3*x^2 + 12*x + 3
+Polynomial 2: 15*x^4 + 4*x^3 + 14*x^2 - 3*x + 1
+Sum: 24*x^4 + 3*x^3 + 11*x^2 + 9*x + 4
+Subtraction: -6*x^4 - 5*x^3 - 17*x^2 + 15*x + 2
+Product: 135*x^8 + 21*x^7 + 77*x^6 + 127*x^5 + 63*x^4 + 188*x^3 + 3*x^2 + 3*x + 3
+Degree of Polynomial: 4
+Evaluation of polynomial at x=2: 151
+Derivative: 36*x^3 - 3*x^2 - 6*x + 12
+Integral: 9*x^5/5 - x^4/4 - x^3 + 6*x^2 + 3*x
+Definite integration from x=0 to x=1: 191/20
+Test Case (22):
+11
+1 0   - 4   1 0   1   2   5   1 2   - 2   1 2   4   2   1 2
+1 4   - 7   1 3   1 0   - 1 3   7   - 7   - 2   - 2   - 8   - 2   - 5
+
+Expected output:
+Polynomial 1: 12*x^11 + 2*x^10 + 4*x^9 + 12*x^8 - 2*x^7 + 12*x^6 + 5*x^5 + 2*x^4 + x^3 + 10*x^2 - 4*x + 10
+Polynomial 2: -5*x^11 - 2*x^10 - 8*x^9 - 2*x^8 - 2*x^7 - 7*x^6 + 7*x^5 - 13*x^4 + 10*x^3 + 13*x^2 - 7*x + 14
+Sum: 7*x^11 - 4*x^9 + 10*x^8 - 4*x^7 + 5*x^6 + 12*x^5 - 11*x^4 + 11*x^3 + 23*x^2 - 11*x + 24
+Subtraction: 17*x^11 + 4*x^10 + 12*x^9 + 14*x^8 + 19*x^6 - 2*x^5 + 15*x^4 - 9*x^3 - 3*x^2 + 3*x - 4
+Product: -60*x^22 - 34*x^21 - 120*x^20 - 108*x^19 - 74*x^18 - 248*x^17 + 5*x^16 - 306*x^15 - 31*x^14 + 120*x^13 - 294*x^12 + 273*x^11 - 9*x^10 - 84*x^9 + 287*x^8 + 38*x^7 - 59*x^6 + 291*x^5 - 19*x^4 - 8*x^3 + 298*x^2 - 126*x + 140
+Degree of Polynomial: 11
+Evaluation of polynomial at x=2: 32498
+Derivative: 132*x^10 + 20*x^9 + 36*x^8 + 96*x^7 - 14*x^6 + 72*x^5 + 25*x^4 + 8*x^3 + 3*x^2 + 20*x - 4
+Integral: x^12 + 2*x^11/11 + 2*x^10/5 + 4*x^9/3 - x^8/4 + 12*x^7/7 + 5*x^6/6 + 2*x^5/5 + x^4/4 + 10*x^3/3 - 2*x^2 + 10*x
+Definite integration from x=0 to x=1: 13241/770
+Test Case (23):
+4
+1 3   0   3   - 3   - 9
+0   8   8   6   7
+
+Expected output:
+Polynomial 1: -9*x^4 - 3*x^3 + 3*x^2 + 13
+Polynomial 2: 7*x^4 + 6*x^3 + 8*x^2 + 8*x
+Sum: -2*x^4 + 3*x^3 + 11*x^2 + 8*x + 13
+Subtraction: -16*x^4 - 9*x^3 - 5*x^2 - 8*x + 13
+Product: -63*x^8 - 75*x^7 - 69*x^6 - 78*x^5 + 91*x^4 + 102*x^3 + 104*x^2 + 104*x
+Degree of Polynomial: 4
+Evaluation of polynomial at x=2: -143
+Derivative: -36*x^3 - 9*x^2 + 6*x
+Integral: -9*x^5/5 - 3*x^4/4 + x^3 + 13*x
+Definite integration from x=0 to x=1: 229/20
+Test Case (24):
+6
+- 1 4   - 7   - 9   3   - 2   0   7
+1 2   8   1 4   1 1   - 4   1 0   4
+
+Expected output:
+Polynomial 1: 7*x^6 - 2*x^4 + 3*x^3 - 9*x^2 - 7*x - 14
+Polynomial 2: 4*x^6 + 10*x^5 - 4*x^4 + 11*x^3 + 14*x^2 + 8*x + 12
+Sum: 11*x^6 + 10*x^5 - 6*x^4 + 14*x^3 + 5*x^2 + x - 2
+Subtraction: 3*x^6 - 10*x^5 + 2*x^4 - 8*x^3 - 23*x^2 - 15*x - 26
+Product: 28*x^12 + 70*x^11 - 36*x^10 + 69*x^9 + 100*x^8 - 96*x^7 - x^6 - 185*x^5 - 147*x^4 - 288*x^3 - 360*x^2 - 196*x - 168
+Degree of Polynomial: 6
+Evaluation of polynomial at x=2: 376
+Derivative: 42*x^5 - 8*x^3 + 9*x^2 - 18*x - 7
+Integral: x^7 - 2*x^5/5 + 3*x^4/4 - 3*x^3 - 7*x^2/2 - 14*x
+Definite integration from x=0 to x=1: -383/20
+Test Case (25):
+5
+- 7   - 9   - 1 1   4   1 1   5
+- 1 4   6   - 9   - 9   - 2   - 4
+
+Expected output:
+Polynomial 1: 5*x^5 + 11*x^4 + 4*x^3 - 11*x^2 - 9*x - 7
+Polynomial 2: -4*x^5 - 2*x^4 - 9*x^3 - 9*x^2 + 6*x - 14
+Sum: x^5 + 9*x^4 - 5*x^3 - 20*x^2 - 3*x - 21
+Subtraction: 9*x^5 + 13*x^4 + 13*x^3 - 2*x^2 - 15*x + 7
+Product: -20*x^10 - 54*x^9 - 83*x^8 - 108*x^7 - 47*x^6 + 105*x^5 + 64*x^4 + 22*x^3 + 163*x^2 + 84*x + 98
+Degree of Polynomial: 5
+Evaluation of polynomial at x=2: 299
+Derivative: 25*x^4 + 44*x^3 + 12*x^2 - 22*x - 9
+Integral: 5*x^6/6 + 11*x^5/5 + x^4 - 11*x^3/3 - 9*x^2/2 - 7*x
+Definite integration from x=0 to x=1: -167/15
+Test Case (26):
+8
+1 4   - 3   5   6   1 3   - 7   1   - 4   5
+- 1 2   5   - 7   1 2   - 1 4   1 3   - 9   - 4   1 4
+
+Expected output:
+Polynomial 1: 5*x^8 - 4*x^7 + x^6 - 7*x^5 + 13*x^4 + 6*x^3 + 5*x^2 - 3*x + 14
+Polynomial 2: 14*x^8 - 4*x^7 - 9*x^6 + 13*x^5 - 14*x^4 + 12*x^3 - 7*x^2 + 5*x - 12
+Sum: 19*x^8 - 8*x^7 - 8*x^6 + 6*x^5 - x^4 + 18*x^3 - 2*x^2 + 2*x + 2
+Subtraction: -9*x^8 + 10*x^6 - 20*x^5 + 27*x^4 - 6*x^3 + 12*x^2 - 8*x + 26
+Product: 70*x^16 - 76*x^15 - 15*x^14 - x^13 + 79*x^12 + 224*x^11 - 259*x^10 + 216*x^9 - 112*x^8 + 210*x^7 - 301*x^6 + 391*x^5 - 393*x^4 + 142*x^3 - 173*x^2 + 106*x - 168
+Degree of Polynomial: 8
+Evaluation of polynomial at x=2: 892
+Derivative: 40*x^7 - 28*x^6 + 6*x^5 - 35*x^4 + 52*x^3 + 18*x^2 + 10*x - 3
+Integral: 5*x^9/9 - x^8/2 + x^7/7 - 7*x^6/6 + 13*x^5/5 + 3*x^4/2 + 5*x^3/3 - 3*x^2/2 + 14*x
+Definite integration from x=0 to x=1: 5449/315
+Test Case (27):
+0
+- 1 1
+- 9
+
+Expected output:
+Polynomial 1: -11
+Polynomial 2: -9
+Sum: -20
+Subtraction: -2
+Product: 99
+Degree of Polynomial: 0
+Evaluation of polynomial at x=2: -11
+Derivative: 0
+Integral: -11*x
+Definite integration from x=0 to x=1: -11
+Test Case (28):
+1
+5   - 8
+- 7   0
+
+Expected output:
+Polynomial 1: 5 - 8*x
+Polynomial 2: -7
+Sum: -8*x - 2
+Subtraction: 12 - 8*x
+Product: 56*x - 35
+Degree of Polynomial: 1
+Evaluation of polynomial at x=2: -11
+Derivative: -8
+Integral: -4*x^2 + 5*x
+Definite integration from x=0 to x=1: 1
+Test Case (29):
+0
+5
+- 1 0
+
+Expected output:
+Polynomial 1: 5
+Polynomial 2: -10
+Sum: -5
+Subtraction: 15
+Product: -50
+Degree of Polynomial: 0
+Evaluation of polynomial at x=2: 5
+Derivative: 0
+Integral: 5*x
+Definite integration from x=0 to x=1: 5
+Test Case (30):
+3
+1 5   1 1   - 2   9
+- 5   - 1 1   - 6   1 4
+
+Expected output:
+Polynomial 1: 9*x^3 - 2*x^2 + 11*x + 15
+Polynomial 2: 14*x^3 - 6*x^2 - 11*x - 5
+Sum: 23*x^3 - 8*x^2 + 10
+Subtraction: -5*x^3 + 4*x^2 + 22*x + 20
+Product: 126*x^6 - 82*x^5 + 67*x^4 + 121*x^3 - 201*x^2 - 220*x - 75
+Degree of Polynomial: 3
+Evaluation of polynomial at x=2: 101
+Derivative: 27*x^2 - 4*x + 11
+Integral: 9*x^4/4 - 2*x^3/3 + 11*x^2/2 + 15*x
+Definite integration from x=0 to x=1: 265/12

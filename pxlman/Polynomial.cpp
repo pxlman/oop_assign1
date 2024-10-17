@@ -193,7 +193,7 @@ int main() {
     cout << "Sum: " << p3 << endl;
     cout << "Difference: " << p4 << endl;
     cout << "Product: " << p5 << endl;
-
+    cout << "Compose: " << p1.compose(p1) << endl;
     cout << "Degree of Polynomial 1: " << p1.degree() << endl;
     cout << "Evaluation of Polynomial 1 at x=2: " << p1.evaluate(2) << endl;
     cout << "Derivative of Polynomial 1: " << p1.derivative() << endl;
